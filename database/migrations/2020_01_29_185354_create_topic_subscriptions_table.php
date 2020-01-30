@@ -4,8 +4,9 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePasswordResetsTable extends Migration
+class CreateTopicSubscriptionsTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -13,12 +14,14 @@ class CreatePasswordResetsTable extends Migration
      */
     public function up()
     {
-        Schema::create('password_resets', function (Blueprint $table) {
-            $table->string('email')->index();
-            $table->string('token');
-            $table->timestamp('created_at')->nullable();
+        Schema::create('topic_subscriptions', function (Blueprint $table) {
+            $table->integer('user_id')->unsigned()->default(0);
+            $table->integer('topic_id')->unsigned()->default(0);
+
+            $table->primary(['user_id', 'topic_id']);
         });
     }
+
 
     /**
      * Reverse the migrations.
@@ -27,6 +30,7 @@ class CreatePasswordResetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('password_resets');
+        Schema::drop('topic_subscriptions');
     }
+
 }
