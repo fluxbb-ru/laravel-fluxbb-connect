@@ -19,7 +19,7 @@ class Online extends Model
         'ident',        // Identification string for the user (Username for logged in users, IP address for guests)
         'logged',       // A UNIX timestamp representing the time of the users last activity
         'idle',         // If the user is idle or not (i.e. their last visit was more than o_timeout_online seconds ago,
-        // but less than o_timeout_visit seconds ago
+                        // but less than o_timeout_visit seconds ago
         'last_post',    // A UNIX timestamp representing the time the user last made a post
         'last_search',  // A UNIX timestamp representing the time the user last performed a search
     ];
@@ -27,6 +27,7 @@ class Online extends Model
     protected $dateFormat = 'U';
 
     protected $casts = [
+        'logged' => 'datetime',
         'last_post' => 'datetime',
         'last_search' => 'datetime',
     ];

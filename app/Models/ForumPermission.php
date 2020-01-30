@@ -8,11 +8,11 @@ class ForumPermission extends Pivot
 {
     public $incrementing = false;
 
-    public $timestamps = false; // natively not supported by Eloquent
+    public $timestamps = false;
 
     protected $table = 'forum_perms';
 
-    protected $primaryKey = ['group_id', 'forum_id'];
+    protected $primaryKey = ['group_id', 'forum_id']; // natively not supported by Eloquent
 
     protected $fillable = [
         'group_id',     // The ID of the group this permission set applies to

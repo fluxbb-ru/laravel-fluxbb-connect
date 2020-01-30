@@ -17,7 +17,7 @@ class User extends Authenticatable
 
     protected $fillable = [
         'group_id',         // The ID of the group to which this user belongs.
-        // The default is PUN_MEMBER
+                            // The default is Group::PUN_MEMBER
         'username',         // The users username
         'password',         // The users password hash
         'email',            // The users email address
@@ -74,6 +74,8 @@ class User extends Authenticatable
     protected $casts = [
         'last_post' => 'datetime',
         'last_search' => 'datetime',
+        'last_email_sent' => 'datetime',
+        'last_report_sent' => 'datetime',
         'registered' => 'datetime',
         'last_visit' => 'datetime',
     ];
