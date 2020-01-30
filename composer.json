@@ -1,10 +1,11 @@
 {
-    "name": "laravel/laravel",
+    "name": "fluxbb-ru/laravel-fluxbb-connect",
     "type": "project",
     "description": "The Laravel Framework.",
     "keywords": [
-        "framework",
-        "laravel"
+        "project",
+        "laravel",
+        "fluxbb"
     ],
     "license": "MIT",
     "require": {
