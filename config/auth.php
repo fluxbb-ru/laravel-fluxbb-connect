@@ -67,8 +67,9 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
-            'model' => App\User::class,
+//            'driver' => 'eloquent',
+            'driver' => 'fluxbb_users',
+            'model' => App\Models\User::class,
         ],
 
         // 'users' => [
