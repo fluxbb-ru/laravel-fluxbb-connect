@@ -53,7 +53,7 @@ class Forum extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function lastPost()
+    public function recentPost()
     {
         return $this->belongsTo(Post::class, 'last_post_id');
     }

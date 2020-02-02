@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
+Route::get('/', 'ForumController@index')->name('index');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
